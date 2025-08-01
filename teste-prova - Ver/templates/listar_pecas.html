@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Lista de peças
+{% endblock %}
+
+{% block conteudo %}
+    <h1>Lista de peças</h1>
+    {% for peca in lista %}
+        <div style="border: 1px solid; margin-bottom: 10px;">
+            <p>Nome: {{peca['pec_nome']}}</p>
+            <form action="{{ url_for('mostrar_peca') }}" method="get">
+                <button name="id" value="{{peca['pec_id']}}">Ver</button>
+            </form>
+            <form action="{{ url_for('remover_peca') }}" method="get">
+                <button name="id" value="{{peca['pec_id']}}">Remover</button>
+            </form>
+            <form action="{{ url_for('editar_peca') }}" method="get">
+                    <button name="id" value="{{peca['pec_id']}}">Editar</button>
+            </form>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+
+

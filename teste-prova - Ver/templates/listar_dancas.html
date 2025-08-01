@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Lista de danças
+{% endblock %}
+
+{% block conteudo %}
+    <h1>Lista de danças</h1>
+    {% for danca in lista %}
+        <div style="border: 1px solid; margin-bottom: 10px;">
+            <p>Nome: {{danca['dan_nome']}}</p>
+            <form action="{{ url_for('mostrar_danca') }}" method="get">
+                <button name="id" value="{{danca['dan_id']}}">Ver</button>
+            </form>
+        </div>
+    {% endfor %}
+{% endblock %}
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block titulo %}
+            
+        {% endblock %}
+    </title>
+</head>
+<body>
+    <nav>
+        <p><a href="{{ url_for('index') }}">Página inicial</a></p>
+        <p><a href="{{ url_for('cadastro') }}">Cadastrar</a></p>
+        <p><a href="{{ url_for('buscar_usuario') }}">Buscar usuário</a></p>
+        <p><a href="{{ url_for('listar_usuarios') }}">Listar usuários</a></p>
+        <p><a href="{{ url_for('cadastrar_peca') }}">Cadastrar peça</a></p>
+        <p><a href="{{ url_for('buscar_peca') }}">Buscar Peça</a></p>
+        <p><a href="{{ url_for('listar_pecas') }}">Listar peças</a></p>
+        <p><a href="{{ url_for('cadastrar_danca') }}">Cadastrar danças</a></p>
+    </nav>
+    {% block conteudo %}
+        
+    {% endblock %}
+</body>
+</html>

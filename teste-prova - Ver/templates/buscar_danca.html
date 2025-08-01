@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Procurar Dança
+{% endblock %}
+
+{% block conteudo %}
+    <h1>Procurar Dança</h1>
+    <form action="{{url_for('buscar_danca')}}" method="post">
+        <input type="text" name="id" placeholder="Digite o id da dança..." required>
+        <button>Buscar</button>
+    </form>
+{% endblock %}

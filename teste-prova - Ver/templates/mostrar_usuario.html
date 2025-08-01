@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Usuário
+{% endblock %}
+
+{% block conteudo %}
+    <h1>Usuário</h1>
+     {% if lista %}
+        <p>Nome: {{lista['alu_nome']}}</p>
+        <p>Matricula: {{lista['alu_matricula']}}</p>
+    {% endif %}
+{% endblock %}

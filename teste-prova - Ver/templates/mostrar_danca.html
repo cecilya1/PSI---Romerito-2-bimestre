@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Peça
+{% endblock %}
+
+{% block conteudo %}
+    <h1>Peça</h1>
+    {% if lista %}
+        {% for danca in lista %}
+            <p>Nome: {{danca['dan_nome']}}</p>
+            <p>Categoria: {{danca['dan_categoria']}}</p>
+            <p>Descricao: {{danca['dan_descricao']}}</p>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

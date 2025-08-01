@@ -1,0 +1,8 @@
+{% with errors = get_flashed_messages(category_filter=['mostrar_usuario'])  %}
+    {% if errors %}
+        {% for usuario in errors %}
+            <p>Nome: {{usuario[1]}}</p>
+            <p>Matrícula: {{usuario[2]}}</p>
+        {% endfor %}
+    {% endif %}  
+{% endwith %}

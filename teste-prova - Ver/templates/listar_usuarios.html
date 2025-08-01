@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Lista de usuários
+{% endblock %}
+
+{% block conteudo %}
+    <h1>Lista de usuários</h1>
+    {% for usuario in lista %}
+        <div>
+            <p>Nome: {{usuario['alu_nome']}}</p>
+            <form action="{{ url_for('mostrar_usuario') }}" method="get">
+                <button name="id" value="{{usuario['alu_id']}}">Ver</button>
+            </form>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+
+

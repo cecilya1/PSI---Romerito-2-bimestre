@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Cadastrar peça
+{% endblock %}
+
+{% block conteudo %}
+    <h1>Cadastrar Peça Teatral</h1>
+    <form action="{{ url_for('cadastrar_peca') }}" method="post">
+        <input type="text" name="nome" id="" placeholder="Nome..." required>
+        <input type="text" name="turma" id="" placeholder="Turma..." required>
+        <button>Enviar</button>
+    </form>
+    {% include 'componentes/erro.html'   %}
+{% endblock %}

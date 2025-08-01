@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Peça
+{% endblock %}
+
+{% block conteudo %}
+    <h1>Usuário</h1>
+    <form action="{{ url_for('buscar_peca') }}" method="post">
+        <input type="text" name="nome" id="" placeholder="Nome..." required>
+        <input type="text" name="matricula" id="" placeholder="Digite a matrícula..." required>
+        <button>Buscar</button>
+    </form>
+    {% include 'componentes/mostrar_peca.html'   %}
+    {% include 'componentes/erro.html'   %}
+{% endblock %}

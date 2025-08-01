@@ -1,0 +1,8 @@
+{% with errors = get_flashed_messages(category_filter=['mostrar_peca'])  %}
+    {% if errors %}
+        {% for peca in errors %}
+            <p>Nome: {{peca[1]}}</p>
+            <p>Turma: {{peca[2]}}</p>
+        {% endfor %}
+    {% endif %}  
+{% endwith %}
