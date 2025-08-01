@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Festa
+{% endblock %}
+
+{% block conteudo %}
+    <form action="{{ url_for('festa') }}" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="">
+        <label for="valor"></label>
+        <input type="number" name="valor" id="">
+        <button>Envair</button>
+    </form>
+{% endblock %}
