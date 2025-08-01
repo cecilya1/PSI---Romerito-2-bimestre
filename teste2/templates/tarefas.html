@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Tarefas
+{% endblock %}
+
+{% block conteudo %}
+    {% for item in resultado %}
+        {% for dados in item %}
+            <p>{{dados}}</p>
+        {% endfor %}
+    {% endfor %}
+{% endblock %}

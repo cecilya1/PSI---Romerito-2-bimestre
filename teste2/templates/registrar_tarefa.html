@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Registrar Tarefa
+{% endblock %}
+
+{% block conteudo %}
+    <form action="{{ url_for('registrar_tarefa') }}" method="post">
+        <input type="text" name="titulo" id="" placeholder="titulo...">
+        <input type="text" name="descricao" id="" placeholder="descrição...">
+        <select name="status" id="">
+            <option value="pendente">Pendente</option>
+            <option value="concluida">Concluída</option>
+        </select>
+        <input type="date" name="data_criacao" id="">
+        <button>Registrar</button>
+    </form>
+{% endblock %}
